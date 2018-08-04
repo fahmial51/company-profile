@@ -35,28 +35,20 @@ export default class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="#" active={this.props.page == 'Home' && true}  onClick={()=>{this.props.pindahHalaman('Home')}}>Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="#" active={this.props.page == 'Kajian Koding' && true} onClick={()=>{this.props.pindahHalaman('Kajian Koding')}}>Kajian Koding</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="#" active={this.props.page == 'Santren Kilat' && true} onClick={()=>{this.props.pindahHalaman('Santren Kilat')}}>Santren Kilat</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#" active={this.props.page == 'Mondok' && true} onClick={()=>{this.props.pindahHalaman('Mondok')}}>Mondok</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#" active={this.props.page == 'Tentang Kami' && true} onClick={()=>{this.props.pindahHalaman('Tentang Kami')}}>Tentang Kami</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
